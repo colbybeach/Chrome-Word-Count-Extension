@@ -1,0 +1,19 @@
+body{
+  background-color: #F0F0F2;
+  font-family: "Open Sans", "HelveticaNeue", Helvetica, Arial;
+}
+#whiteBox{
+    width: 300px;
+    height: 250px;
+    border-radius: 4%;
+    background-color: white;
+    text-align: left;
+}
+
+#head{
+    padding-top: 20px;
+}
+
+#countWords{
+
+}
