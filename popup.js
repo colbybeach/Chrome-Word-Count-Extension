@@ -6,8 +6,9 @@ var checkPageButton, str, strNoSpaces, strSplit, wordCount, charCount;
 //Getting the button element into a variable
    checkPageButton = document.getElementById('countWords');
 
+
   //Adding a click action the button which will iniate a function
-  checkPageButton.addEventListener('click', function() {
+  checkPageButton.addEventListener('click', function countWordsFunc() {
 
     //Putting the userinput into a variable
      str = document.getElementById('textField').value;
@@ -35,5 +36,7 @@ var checkPageButton, str, strNoSpaces, strSplit, wordCount, charCount;
     + charCount + " characters!";
 
 
-},false);
+  },false);
+
+
 },false);
