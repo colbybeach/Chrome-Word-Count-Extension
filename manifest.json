@@ -1,8 +1,10 @@
 {
   "manifest_version": 2,
   "name": "Word Count",
-  "description": "This extension will count the words inputted!",
-  "version": "0.1",
+  "description": "Word Count will take a body of text pasted
+                  into the extension and give a perfect count of the number of
+                  words as well as characters in the text.",
+  "version": "0.0.1",
   "content_scripts": [
     {
       "matches": [

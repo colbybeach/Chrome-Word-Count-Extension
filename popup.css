@@ -1,27 +1,29 @@
 body{
   background-color: #F0F0F2;
-  font-family: "Open Sans", "HelveticaNeue", Helvetica, Arial;
+  font-family: Arial;
 }
 #whiteBox{
     width: 160px;
-    height: 200px;
+    height: 180px;
     border-radius: 4%;
     background-color: white;
     text-align: left;
 }
 
 #head{
-    padding-top: 20px;
+    padding-top:5px;
 }
 #textField{
   width: 75%;
+  margin-top: 5px;
+}
+.styleClass{
 }
 #countWords{
   background: blue;
   border: 0px;
   color:white;
   font-weight: bold;
-  text-transform: uppercase;
   transition: 0.3s;
 
 }
