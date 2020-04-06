@@ -3,8 +3,8 @@ body{
   font-family: "Open Sans", "HelveticaNeue", Helvetica, Arial;
 }
 #whiteBox{
-    width: 300px;
-    height: 250px;
+    width: 160px;
+    height: 200px;
     border-radius: 4%;
     background-color: white;
     text-align: left;
@@ -13,7 +13,19 @@ body{
 #head{
     padding-top: 20px;
 }
-
+#textField{
+  width: 75%;
+}
 #countWords{
+  background: blue;
+  border: 0px;
+  color:white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
 
+}
+#countWords:hover{
+  background: #7291FF;
+  transition: 0.3s;
 }
