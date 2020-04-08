@@ -1,12 +1,13 @@
 <script>
-/*  chrome.browserAction.onClicked.addListener(function(tab) {
+  chrome.browserAction.onClicked.addListener(function(tab) {
   chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
      sendServiceRequest(response.data);
   });
 });
 
+//Handling the request and then using it to search in Google
 function sendServiceRequest(selectedText) {
   var serviceCall = 'http://www.google.com/search?q=' + selectedText;
   chrome.tabs.create({url: serviceCall});
-}*/
+}
 </script>

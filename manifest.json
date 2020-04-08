@@ -3,16 +3,27 @@
   "name": "Word Count",
   "description": "Word Count will take a body of text and give a perfect count of the number of words as well as characters in the text.",
   "version": "0.0.1",
-  
-  "icons": { "16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png"
-         },
-
   "browser_action": {
    "default_popup": "popup.html"
   },
 
+  "content_scripts": [
+     {
+      "matches": ["<all_urls>"],
+       "js": ["popupAPI.js"]
+     }
+   ],
+
+   "background": {
+       "scripts": ["background.js"]
+     },
+
+
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png"
+         },
 
   "permissions": [
    "activeTab"
