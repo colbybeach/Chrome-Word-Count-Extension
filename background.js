@@ -1,16 +1,31 @@
+//Setting up a listener
+chrome.browserAction.onClicked.addListener(buttonClicked);
 
-  chrome.browserAction.onClicked.addListener(function(tab) {
+//Function for when the onClicked is called
+function buttonClicked(tab){
 
-      chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
-         sendServiceRequest(response.data);
-      });
+  var str, strNoSpaces, strSplit, wordCount, charCount;
 
-  });
+  chrome.tabs.executeScript({code:"window.getSelection().toString();"},
 
-  //Handling the request 
-  function sendServiceRequest(selectedText) {
+    function wordCounter(results){
 
-      alert(selectedText);
+       str = results.toString();
 
+       strNoSpaces = str.replace(/  +/g, ' ');
 
-  }
+       strSplit = strNoSpaces.split(" ");
+       wordCount = strSplit.length;
+
+        if(strSplit[0] == ""){
+          wordCount --;
+        }
+
+        charCount = str.replace(/  +/g, '').length;
+
+        var numbersReturn = ("There are " + wordCount + " words and " + charCount + " characters (without spaces)!");
+        alert(numbersReturn);
+      }
+    );
+
+}
