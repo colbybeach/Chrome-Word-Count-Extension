@@ -10,9 +10,8 @@ function buttonClicked(tab){
   //Telling chrome to execute this script, calls function wordCounter 
   chrome.tabs.executeScript({code:"window.getSelection().toString();"},
 
-    function wordCounter(results){
-
-      //Getting the results to a string and putting it into an array, where it is then counted
+  function countWords(){
+        //Getting the results to a string and putting it into an array, where it is then counted
       //into the wordCount variable 
        str = results.toString();
        strNoSpaces = str.replace(/  +/g, ' ');
@@ -33,7 +32,7 @@ function buttonClicked(tab){
 
       }
     );
-
+    
 }
 
 
