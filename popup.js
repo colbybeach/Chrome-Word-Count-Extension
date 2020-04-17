@@ -1,6 +1,5 @@
-/*//Setting up a listener
-chrome.browserAction.onClicked.addListener(buttonClicked)
-
+//Setting up a listener
+chrome.tabs.query(buttonClicked)
 //Function for when the onClicked is called
 function buttonClicked(tab){
 
@@ -28,11 +27,11 @@ function buttonClicked(tab){
         msg = "There are " + wordCount + " words and " + charCount + " characters (without spaces)!";
         
         //Sending a message to the content script 
-        chrome.tabs.sendMessage(tab.id, msg);
+        chrome.tabs.sendMessage(tab[0].id, msg);
 
       }
     );
     
 }
-*/
+
 
