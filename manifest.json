@@ -2,11 +2,12 @@
   "manifest_version": 2,
   "name": "Word Count",
   "description": "Word Count will take a body of text and give a perfect count of the number of words as well as characters in the text.",
-  "version": "0.1",
+  "version": "1.0",
 
   "browser_action": {
    "default_icon": "icon16.png",
-   "default_title": "Count Words!"
+   "default_title": "Count Words!",
+   "default_popup": "popup.html"
   },
 
   "content_scripts": [
@@ -23,8 +24,8 @@
 
 
   "icons": { "16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png"
+             "48": "icon48.png",
+             "128": "icon128.png"
          },
 
   "permissions": [
