@@ -3,31 +3,24 @@ body{
   font-family: Arial;
 }
 #whiteBox{
-    width: 160px;
-    height: 180px;
+    width: 190px;
+    height: 310px;
     border-radius: 4%;
     background-color: white;
     text-align: left;
 }
 
 #head{
-    padding-top:5px;
+    font-size: 25px;
+    padding-top:8px;
+    font-weight: bold;
+    color: #1fadff;
 }
-#textField{
-  width: 75%;
-  margin-top: 5px;
+.bodyText1{
+  font-size: 16px;
+  margin-left: 1px;
+  margin-right: 1px;
 }
-.styleClass{
-}
-#countWords{
-  background: blue;
-  border: 0px;
-  color:white;
-  font-weight: bold;
-  transition: 0.3s;
-
-}
-#countWords:hover{
-  background: #7291FF;
-  transition: 0.3s;
+.bodyText2{
+  font-size: 14px;
 }
