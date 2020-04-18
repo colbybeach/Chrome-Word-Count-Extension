@@ -1,7 +1,4 @@
-chrome.runtime.sendMessage({popupOpen: true});
+chrome.runtime.sendMessage({popupOpen: true},response =>{
+  alert(response);
+});
 
-window.onload = function(){
-  
-  document.getElementById('numberReturn').innerHTML = 'Hey';
-
-}

@@ -1,21 +1,21 @@
-chrome.runtime.onMessage.addListener(function(message){
+var msg;
+
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
     if(message.popupOpen) {
       buttonClicked();
-    }  
+      sendResponse('hey');
+    }
 });
 
 
-var str, strNoSpaces, strSplit, wordCount, charCount, msg;
-
-function buttonClicked(tab){
+function buttonClicked(){
 
     //Declaring variables 
   
     //Telling chrome to execute this script, calls function wordCounter 
-    chrome.tabs.executeScript({code:"window.getSelection().toString();"},
-  
-    function wordCounter(results){
-       
+    chrome.tabs.executeScript({code:"window.getSelection().toString();"}, results =>{
+        let str, strNoSpaces, strSplit, wordCount, charCount;
+
          str = results.toString();
          strNoSpaces = str.replace(/  +/g, ' ');
          strSplit = strNoSpaces.split(" ");
@@ -23,22 +23,18 @@ function buttonClicked(tab){
           if(strSplit[0] == ""){
             wordCount --;
           }
+         
   
           //Getting the amount of characters minus spaces
           charCount = str.replace(/  +/g, '').length;
   
           //Declaring the message variable 
-          msg = "There are " + wordCount + " words and " + charCount + " characters (without spaces)!";
-          console.log(msg);
-        
-          //Sending a message to the content script
-          //chrome.tabs.sendMessage(tab.id, msg);
-   
+          msg = "There are " + wordCount + " words and " + charCount + " characters (without spaces)!"; 
+
         }
       );
+      console.log(msg);
     }
 
 
-
-//chrome.browserAction.onClicked.addListener(buttonClicked)
 
