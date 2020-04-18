@@ -1,4 +1,4 @@
 chrome.runtime.sendMessage({popupOpen: true},response =>{
-  alert(response);
+  document.getElementById('numberReturn').innerHTML = response;
 });
 
