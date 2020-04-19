@@ -21,12 +21,12 @@ chrome.tabs.executeScript({code: 'window.getSelection().toString();'}, selection
 
     //Tests to see if the URL is in Google Docs 
     if(url.includes('https://docs.google.com/document/')){
-      document.getElementById('numbersReturn').innerHTML = 'This extension does not work with Google Docs';
+      document.getElementById('numbersReturn').innerHTML = 'This extension does not work with Google Docs.';
 
     //Tests to see if the URL a PDF 
     }else if(url.includes('.pdf')){
 
-      document.getElementById('numbersReturn').innerHTML = 'This extension does not work with PDF Files';
+      document.getElementById('numbersReturn').innerHTML = 'This extension does not work with PDF Files.';
 
     //Counts highlighted words 
     }else {
@@ -35,8 +35,6 @@ chrome.tabs.executeScript({code: 'window.getSelection().toString();'}, selection
   });
   
 });  
-
-
 
 
  /**Count words function count amount of words in a string
@@ -60,9 +58,9 @@ chrome.tabs.executeScript({code: 'window.getSelection().toString();'}, selection
     
     //Getting the amount of characters minus spaces
     charCount = x.replace(/  +/g, '').length;
+
+
     msg = 'There are ' + wordCount + ' words and ' + charCount + ' characters!'; 
-
-
 
     document.getElementById('numbersReturn').innerHTML = msg; //Changes HTML
   }
